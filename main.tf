@@ -12,9 +12,9 @@ terraform {
 }
 
 resource "random_id" "rand_id" {
-  byte_length = 8
+  byte_length = 10
 }
 
 resource "aws_s3_bucket" "tf-bucket-cloud" {
-  bucket = "tf-cloud-s3-bucket-${random_id.rand_id.hex}"
+  bucket = "tf-clouds-s3-bucket-${random_id.rand_id.hex}"
 }
